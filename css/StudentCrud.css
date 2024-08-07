@@ -1,0 +1,43 @@
+body {
+    background-color: #f8f9fa;
+  }
+  .form-item {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .form-item dd {
+    margin-bottom: 10px;
+  }
+  .form-item input,
+  .form-item select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+  .form-item input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .form-item input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  .data-items table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  .data-items th,
+  .data-items td {
+    padding: 10px;
+    border: 1px solid #dee2e6;
+  }
+  .data-items th {
+    background-color: #e9ecef;
+  }

@@ -12,51 +12,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <style>
-      body {
-        background-color: #f8f9fa;
-      }
-      .form-item {
-        background-color: #ffffff;
-        padding: 20px;
-        margin-bottom: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-      .form-item dd {
-        margin-bottom: 10px;
-      }
-      .form-item input,
-      .form-item select {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid #ced4da;
-        border-radius: 4px;
-      }
-      .form-item input[type="submit"] {
-        background-color: #007bff;
-        color: white;
-        border: none;
-        cursor: pointer;
-      }
-      .form-item input[type="submit"]:hover {
-        background-color: #0056b3;
-      }
-      .data-items table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-      }
-      .data-items th,
-      .data-items td {
-        padding: 10px;
-        border: 1px solid #dee2e6;
-      }
-      .data-items th {
-        background-color: #e9ecef;
-      }
-    </style>
+    <link rel="stylesheet" href="css/StudentCrud.css">
+    <script src="/js/StudentCrud.js"></script>
   </head>
   <body>
     <div class="container-fluid">
@@ -105,53 +62,6 @@
         </div>
       </div>
     </div>
-    <script>
-      var MyForm = document.getElementById("myForm");
-      MyForm.addEventListener("submit", (e) => {
-        e.preventDefault(), (ID = document.getElementById("stdid"));
-        FirstName = document.getElementById("fullname");
-        Mobile = document.getElementById("mobile");
-        gmail = document.getElementById("gmail");
-        clas = document.getElementById("cls");
-
-        td0 = document.createElement("td");
-        td1 = document.createElement("td");
-        td2 = document.createElement("td");
-        td3 = document.createElement("td");
-        td4 = document.createElement("td");
-        td5 = document.createElement("td");
-
-        tr = document.createElement("tr");
-
-        btnupdate = document.createElement("button");
-        btndelete = document.createElement("button");
-
-        td0.innerHTML = ID.value;
-        td1.innerHTML = FirstName.value;
-        td2.innerHTML = Mobile.value;
-        td3.innerHTML = gmail.value;
-        td4.innerHTML = clas.value;
-        td5.innerHTML =
-        `<button class="btn btn-primary">update</button> <button class="btn btn-danger" value="${ID.value}">delete</button> `
-           
  
-        tr.appendChild(td0);
-        tr.appendChild(td1);
-        tr.appendChild(td2);
-        tr.appendChild(td3);
-        tr.appendChild(td4);
-        tr.appendChild(td5);
-
-        tbody = document.querySelector("tbody");
-
-        tbody.appendChild(tr);
-
-        ID.value = "";
-        FirstName.value = "";
-        Mobile.value = "";
-        gmail.value = "";
-        clas.value = "";
-      });
-    </script>
   </body>
 </html>
