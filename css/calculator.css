@@ -1,0 +1,72 @@
+.cal {
+    text-align: center;
+  }
+  body {
+    background-color: gray;
+  }
+  .contentback {
+    display: flex;
+    flex-direction: column;
+    height: 524px;
+    padding: 10px;
+    width: 500px;
+    border-radius: 30px;
+    background-color: #231e1e;
+  }
+  .caldata {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 10px;
+    height: 100px;
+    border: 2px black solid;
+    background-color: #85af45;
+  }
+  .containerdataitems {
+    padding: 5px;
+    justify-content: center;
+  }
+  button {
+    text-align: center;
+    margin: 2px;
+    padding: 20px;
+    border-radius: 15px;
+    width: 100px;
+  }
+  .equal {
+    width: 100px;
+    height: 200px;
+    background-color: #00ff5e;
+  }
+  .red {
+    background-color: red;
+    color: white;
+  }
+  button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .blue {
+    background-color: rgb(38, 118, 255);
+    color: white;
+    font-weight: bold;
+  }
+  button:active {
+    background-color: rgb(101, 101, 101);
+  }
+  .blue:active {
+    background-color: rgb(0, 0, 137);
+  }
+  .red:active {
+    background-color: rgb(137, 2, 2);
+  }
+  .item {
+    padding-right: 17px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+    align-content: flex-end;
+    flex-wrap: wrap;
+  }
