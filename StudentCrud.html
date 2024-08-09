@@ -46,7 +46,7 @@
           </form>
         </div>
         <div class="data-items">
-          <table>
+          <table id="myTable">
             <thead>
               <tr>
                 <th>Id</th>
@@ -65,7 +65,8 @@
     <script>
       var MyForm = document.getElementById("myForm");
       MyForm.addEventListener("submit", (e) => {
-        e.preventDefault(), (ID = document.getElementById("stdid"));
+        e.preventDefault(), 
+        ID = document.getElementById("stdid");
         FirstName = document.getElementById("fullname");
         Mobile = document.getElementById("mobile");
         gmail = document.getElementById("gmail");
@@ -113,6 +114,8 @@
        if(e.target.name=="updatebtn")
        {
         
+       x= document.querySelector("tbody").rows[0].cells.item(0).innerHTML;
+       console.log(x)
         console.log(e.target)
 
        }
