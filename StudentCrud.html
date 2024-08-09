@@ -1,136 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="css/StudentCrud.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <script src="/js/StudentCrud.js" defer></script>
-  </head>
-  <body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <style>
+        .tbltxt{
+            text-align: center;
+            display: none;
+        }
+       
+        thead ,th,tr{
+            background-color: rgb(251, 255, 0);
+            padding: 10px;
+            color: black;
+            border: 2px rgb(0, 0, 0) solid;
+        }
+        tbody,tr,td{
+            background-color: rgb(207, 207, 207);
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border: 2px rgb(0, 0, 0) solid;
+            font-weight: bold;
+            
+            
+        }
+        #btnsubmit{
+            margin-top: 50px;
+        }
+        .row{
+            border: 2px black solid;
+        }
+    </style>
+</head>
+<body onload="loadform()">
     <div class="container-fluid">
-      <div class="container">
-        <div class="form-item">
-          <form id="myForm">
-            <dd>ID</dd>
-            <dd><input type="number" name="ID" id="stdid" /></dd>
-            <dd>Name</dd>
-            <dd><input type="text" name="fullname" id="fullname" /></dd>
-            <dd>Mobile</dd>
-            <dd><input type="text" name="mob" id="mobile" /></dd>
-            <dd>Gmail</dd>
-            <dd><input type="email" name="gmail" id="gmail" /></dd>
-            <dd>Class</dd>
-            <dd>
-              <select name="cls" id="cls">
-                <option value="">-select-</option>
-                <option value="I">I</option>
-                <option value="II">II</option>
-                <option value="III">III</option>
-                <option value="IV">IV</option>
-                <option value="V">V</option>
-              </select>
-            </dd>
-            <dd>
-              <br />
-              <input type="submit" value="Submit" />
-            </dd>
-          </form>
+        <h1 style="text-align: center; color: red;">STUDENT CRUD</h1>
+        <form  id="myForm">  
+        <div class="row p-4 m-4" >
+            <div class="col-3  " >
+
+              
+                <label >First Name </label> 
+                <br>
+                <input type="text" name="fname" class="w-100" >
+                <br>
+                <br>
+                <label >Email</label>
+                <br><input type="text" name="email" class="w-100" id="email">
+                <br>
+                <br>
+                <label >University</label> 
+                <br>
+                <select class="w-100" name="university" id="unver">
+     
+     
+                </select>
+            </div>
+            <div class="col-3  ">
+                <label >Surname </label>
+                <br>
+                 <input type="text" class="w-100" name="surname" id="surname">
+                <br>
+                <br>
+                <label >Country</label>
+                <br>
+                <select class="w-100" name="countryss" id="country">
+                
+                </select>
+                <br>
+                <br>
+                <label >College</label> 
+                <br>
+                <select class="w-100" name="clg" id="clg">
+ 
+                </select>
+            </div>
+            <div class="col-3    ">
+                <label >Age </label>
+                <br>
+                 <input type="text" class="w-100" name="age" id="age">
+                <br>
+                <br>
+                <label >State</label>
+                <br>
+                <select class="w-100" name="state" id="state">
+                   
+                </select>
+                <br>
+                <br>
+                <label >Program</label> 
+                <br>
+                <select class="w-100" name="program" id="program">
+
+                </select>
+            </div>
+            <div class="col-3   ">
+                <label >Mobile </label>
+                <br>
+                 <input type="text" class="w-100" name="mobile" id="mob">
+                <br>
+                <br>
+                <label >City</label>
+                <br>
+                <select class="w-100" name="city" id="city">
+ 
+                </select>
+                <br>
+                <br>
+                <label >Year</label> 
+                <br>
+                <select class="w-100" name="year" id="year">
+ 
+                </select>
+            </div>
+           
+          <input  id="btnsubmit"  type="submit" class="  btn btn-primary w-100">
         </div>
-        <div class="data-items">
-          <table id="myTable">
+    </form>
+    <br>
+    <br>
+    <div class="container-fluid">
+ 
+        <div  > 
+        <table class="w-100 tbltxt" id="table" >
             <thead>
-              <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Mobile</th>
-                <th>Gmail</th>
-                <th>Class</th>
-                <th>Action</th>
-              </tr>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Surname</th>
+                    <th>Age</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Country</th>
+                    <th>State</th>
+                    <th>City</th>
+                    <th>University</th>
+                    <th>College</th>
+                    <th>Program</th>
+                    <th>Year</th>
+                    <th>Action</th>
+                </tr>
             </thead>
-            <tbody id="tbody"></tbody>
-          </table>
-        </div>
+            <tbody id="tbody">
+              
+            </tbody>
+        </table>
       </div>
     </div>
-    <script>
-      var MyForm = document.getElementById("myForm");
-      MyForm.addEventListener("submit", (e) => {
-        e.preventDefault(), 
-        ID = document.getElementById("stdid");
-        FirstName = document.getElementById("fullname");
-        Mobile = document.getElementById("mobile");
-        gmail = document.getElementById("gmail");
-        clas = document.getElementById("cls");
+    </div>
+</div>
+<!-- <script>
 
-        td0 = document.createElement("td");
-        td1 = document.createElement("td");
-        td2 = document.createElement("td");
-        td3 = document.createElement("td");
-        td4 = document.createElement("td");
-        td5 = document.createElement("td");
+  
 
-        tr = document.createElement("tr");
-
-        btnupdate = document.createElement("button");
-        btndelete = document.createElement("button");
-
-        td0.innerHTML = ID.value;
-        td1.innerHTML = FirstName.value;
-        td2.innerHTML = Mobile.value;
-        td3.innerHTML = gmail.value;
-        td4.innerHTML = clas.value;
-        td5.innerHTML = `<button class="btn btn-primary" name="updatebtn" >update</button> <button  name="deletebtn" class="btn btn-danger" value="${ID.value}">delete</button> `;
-
-        tr.appendChild(td0);
-        tr.appendChild(td1);
-        tr.appendChild(td2);
-        tr.appendChild(td3);
-        tr.appendChild(td4);
-        tr.appendChild(td5);
-
-        tbody = document.querySelector("tbody");
-
-        tbody.appendChild(tr);
-
-        ID.value = "";
-        FirstName.value = "";
-        Mobile.value = "";
-        gmail.value = "";
-        clas.value = "";
-      });
-
-     var tbody = document.getElementById("tbody").addEventListener("click" , e=>{
-       
-       if(e.target.name=="updatebtn")
-       {
-        
-       x= document.querySelector("tbody").rows[0].cells.item(0).innerHTML;
-       console.log(x)
-        console.log(e.target)
-
-       }
-       if(e.target.name=="deletebtn")
-       {
-
-        document.getElementsByTagName("tr")[1].remove();         
-        console.log(e.target)
-
-       }
-
-     })
-      
-      
-   
-    </script>
-  </body>
+</script> -->
+</body>
 </html>
